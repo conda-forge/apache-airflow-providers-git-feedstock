@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-git" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_git-{{ version }}.tar.gz
-  sha256: a3ed8190399c47b814863da20a03d215578b1dc14a0fd1c4aff6e7ad54da5f26
+  sha256: ee59a8b03a7c5d1bf71db29fa61a1ecaf477c316cb4ae6d96e13d53f0326a34f
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=3.0.0
-    - apache-airflow-providers-common-compat >=1.8.0
+    - apache-airflow-providers-common-compat >=1.10.1
     - gitpython >=3.1.44
 
 test:
