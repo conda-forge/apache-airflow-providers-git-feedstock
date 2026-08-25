@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-git
-  version: "0.4.2"
+  version: "0.4.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_git-${{ version }}.tar.gz
-  sha256: b04bdf088b5fa8ac5f0050a0776d3e31eaf2a43983c3245cd5c60ae8d1d84e2a
+  sha256: dda1ffc4a39598120f8cc904e2d23c8c8d9e837a9c3901afb51c497d7c19e29d
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=3.0.0
